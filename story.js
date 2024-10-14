@@ -9,7 +9,7 @@ setTimeout(function () {
     } else {
         form.style.display = 'block'; // Show the form if not submitted
     }
-}, 540000);
+}, 520000);
 
 const result = document.getElementById('result');
 result.style.display = "none"; // Hide the result element initially
