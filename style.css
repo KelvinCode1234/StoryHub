@@ -58,14 +58,14 @@ footer {
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 17px;
+        font-size: 30px;
         font-weight: 600;
-        font-stretch:
     }
 
     p {
         font-size: 15px;
-        margin: 5px auto;
+        font-weight: 600;
+        margin: 30px auto;
     }
     
     footer {
