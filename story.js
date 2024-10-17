@@ -6,15 +6,6 @@ setTimeout(function() {
   document.querySelector('.cancel-button').style.display = 'none'; 
 }, 238800);
 
-function showForm() {
-    document.getElementById("overlay").style.display = "block";
-    document.getElementById("feedback-form").style.display = "block";
-}
-
-function hideForm() {
-    document.getElementById("overlay").style.display = "none";
-    document.getElementById("feedback-form").style.display = "none";
-}
 
 const form = document.getElementById('form');
 const result = document.getElementById('result');
