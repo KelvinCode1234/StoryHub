@@ -8,13 +8,15 @@
 
 body {
     color: #fff;
+    background-color: #000000;
+    height: 100vh;
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
 }
 
 #story-container {
-    height: 100vh;
+    height: 95vh;
 }
 
 span i {
@@ -47,12 +49,19 @@ p {
     margin: 0;
 }
 
+footer {
+    font-size: 15px;
+    color: rgb(0, 255, 0);
+    text-align: center;
+    font-weight: bolder;
+    padding-bottom: 10px;
 
+}
 
 
 @media screen and (max-width: 600px) {
     h1 {
-        font-size: 24px;
+        font-size: 23px;
         font-weight: 600;
     }
 
@@ -65,7 +74,7 @@ p {
     footer {
         font-size: 12px;
     }
-    
+   
 }
 
 @media screen and (max-width: 400px) {
