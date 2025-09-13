@@ -3,20 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoryHub</title>
+    <title>StoryHub - Immersive Storytelling Platform</title>
+    <meta name="description" content="Discover captivating stories from around the world. Immerse yourself in tales of adventure, romance, mystery, and fantasy.">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/z.png">
     <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Welcome to <span>Story</span>Hub</h1>
-        <p>Click the <span><i class="fa-solid fa-cube" loading="eager"></i></span> to continue!</p>
-    </div>
-    <div id="story-container"></div>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><span class="brand-text">Story</span>Hub</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="story.html" class="nav-link">Stories</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to <span class="highlight">Story</span>Hub</h1>
+                <p class="hero-subtitle">Discover captivating tales that transport you to different worlds</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">12+</span>
+                        <span class="stat-label">Stories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Imagination</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="story.html" class="btn btn-primary">
+                        <i class="fas fa-book-open"></i>
+                        Explore Stories
+                    </a>
+                    <button class="btn btn-secondary" id="interactive-cube">
+                        <i class="fa-solid fa-cube"></i>
+                        Interactive Experience
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Why Choose StoryHub?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>Immersive Stories</h3>
+                        <p>Get lost in carefully crafted narratives that bring characters and worlds to life.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Optimized</h3>
+                        <p>Enjoy seamless reading experience across all devices, anywhere, anytime.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Diverse Genres</h3>
+                        <p>From fantasy adventures to heartwarming romances, find stories that speak to you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <div class="interactive-container">
+                <h2 class="interactive-title">Interactive 3D Experience</h2>
+                <p class="interactive-subtitle">Click the rotating cube to enter our story collection</p>
+                <div id="story-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><span class="brand-text">Story</span>Hub</h3>
+                <p>Bringing stories to life through immersive digital experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="story.html">All Stories</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Categories</h4>
+                <ul>
+                    <li><a href="story.html#fantasy">Fantasy</a></li>
+                    <li><a href="story.html#romance">Romance</a></li>
+                    <li><a href="story.html#adventure">Adventure</a></li>
+                    <li><a href="story.html#mystery">Mystery</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StoryHub. All rights reserved. Created by PreshCode</p>
+        </div>
+    </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
-    <footer>Created by PreshCode</footer>
 </body>
 </html>
 

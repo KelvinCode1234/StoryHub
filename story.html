@@ -3,225 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Story Page</title>
+    <title>Story Collection - StoryHub</title>
+    <meta name="description" content="Explore our collection of captivating stories across multiple genres. From fantasy adventures to heartwarming romances.">
     <link rel="icon" type="image/x-icon" href="image/z.png">
     <link rel="stylesheet" href="story.css">
+    <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1> Series Page </h1>
-    <div class="story-container">
-        <details>
-            <summary >The Mask of a Prince</summary>
-            <img src="image/1.jpg" alt="Prince Leon and Princess Elena" loading="eager">
-            <h2>Once Upon a Time</h2>
-            <p>In a faraway kingdom, a young prince named Leon lived a life of luxury, poised to inherit the throne of Verdantia. However, beneath the glittering façade of royal life, Leon felt a profound emptiness. He longed for genuine love, a connection that transcended the superficial nature of the court.</p>
-            <p>Every day, the grand halls of the castle were filled with noble ladies, all vying for the prince's attention. They wore shimmering gowns and spoke with sweet voices, but Leon could see through their rehearsed lines and practiced smiles. None seemed to care about the real him; they only desired his title and the luxurious life that came with it.</p>
-            <p>Heartbroken, Leon made a bold decision: he would disguise himself as a commoner and venture into the bustling village beyond the castle walls to find someone who would love him for who he truly was.</p>
-            <p>One moonlit night, Leon donned a simple cloak, traded his princely attire for worn-out clothes, and slipped away from the castle. He took a deep breath, feeling both exhilarated and nervous as he stepped into the vibrant streets of Verdantia.</p>
-            <p>As he wandered through the lively marketplace, he marveled at the authenticity of the villagers. They were carefree, filled with joy that seemed to evade him within the confines of the castle. Leon approached a group of children playing with a makeshift ball made of rags and leaves. Joining them, he laughed and kicked the ball, forgetting his royal burdens for a moment.</p>
-            <p>Days turned into weeks as Leon explored the village under his disguise. He worked at a local bakery, where he learned to knead dough and bake bread. He made friends with the townsfolk, sharing stories and laughter, but still, he felt something was missing.</p>
-            <h2>Meeting Elena</h2>
-            <p>It was then that he met Elena, a spirited young woman known for her bright smile and kind heart. She had a fiery passion for life, always helping her neighbors and nurturing the community. Leon was drawn to her warmth, and they quickly became friends.</p>
-            <p>They spent long afternoons together, talking about their dreams and aspirations, and exploring the rolling hills surrounding the village. As time passed, Leon found himself falling for her. Elena, too, seemed to sense a deeper connection, but he hesitated to reveal his true identity, fearing that once she learned he was a prince, she would see him as nothing more than a title.</p>
-            <p>One afternoon, while walking through a meadow filled with wildflowers, Elena looked at Leon with a serious expression. “You know, there’s something about you that feels different. You carry a weight on your shoulders. What is it?”</p>
-            <p>Leon’s heart raced. Should he tell her the truth? He took a deep breath and began to share his story. He told her about the pressures of being a prince, the loneliness that came with it, and how he had disguised himself to find someone who would love him for who he truly was.</p>
-            <p>Elena listened intently, her eyes wide with surprise. “You mean you’re a prince? All this time, you’ve been pretending to be someone else?”</p>
-            <p>“Yes,” he admitted, his voice low. “I thought I could find someone who loves me, not for my title, but for who I am. But now I fear I’ve lost something precious.”</p>
-            <p>Elena looked down, contemplating his words. “Leon, I care for you deeply. It doesn’t matter to me what title you hold. You have shown me kindness, laughter, and friendship. I fell in love with the man, not the prince.”</p>
-            <p>Relief washed over him, and he took her hands in his. “You truly mean that?”</p>
-            <p>“Of course! You are brave and genuine, and that is what I admire most about you,” she replied, her voice steady.</p>
-            <p>With newfound courage, Leon kissed her softly, realizing that he had found exactly what he had been searching for—a love that was real and true.</p>
-            <h2>A Royal Return</h2>
-            <p>Leon knew he had to return to the castle, not only to ease his father’s worries but to make a decision about his future. He took Elena back to the castle, their hands intertwined, hearts racing.</p>
-            <p>As they entered the grand hall, the courtiers gasped in disbelief. The king stood up, his face a mixture of anger and relief. “Leon! Where have you been? We feared you were lost!”</p>
-            <p>“I was lost, Father,” Leon replied, his voice strong. “But I found my way back, and I’ve discovered something far more valuable than riches or titles.”</p>
-            <p>With that, he stepped aside and introduced Elena to the court. “This is Elena, the woman who has shown me the true meaning of love. I wish to marry her.”</p>
-            <p>The room fell silent. The king, after a moment of shock, stepped forward. “You wish to marry a commoner? Why, my son?”</p>
-            <p>Leon looked at his father with determination. “Because she loves me for who I am, not for my crown. She brings me joy and laughter, something I’ve never found in the court. I want to be happy.”</p>
-            <img src="image/1a.jpg" alt="Leon And His Father" loading="eager">
-            <h2>A Royal Blessing</h2>
-            <p>After what felt like an eternity, the king’s stern expression softened. “If she makes you happy, then I will accept her as my daughter-in-law. A true king should always seek happiness, even if it lies outside the bounds of tradition.”</p>
-            <p>Cheers erupted in the hall as the courtiers welcomed Elena. The royal wedding was a grand celebration, a joyous union of love that brought the kingdom together.</p>
-            <p>Leon and Elena ruled Verdantia with compassion and understanding, always prioritizing the well-being of their people. They often visited the village, never forgetting the roots of their love.</p>
-            <p>And so, the prince who had pretended to be a commoner found his true identity in love, and they lived happily ever after, proving that the most important title one could hold is that of being true to oneself.</p>
-            <h3>The End!</h3>
-        </details>
+    <header class="story-header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <h1><span class="brand-text">Story</span>Hub</h1>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="#stories" class="nav-link active">Stories</a></li>
+                <li><a href="#categories" class="nav-link">Categories</a></li>
+                <li><a href="#search" class="nav-link">Search</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
+    <main class="story-main">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Story Collection</h1>
+                <p class="hero-subtitle">Discover captivating tales that will transport you to different worlds</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="story-search" placeholder="Search stories...">
+                    </div>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="fantasy">Fantasy</button>
+                        <button class="filter-btn" data-category="romance">Romance</button>
+                        <button class="filter-btn" data-category="adventure">Adventure</button>
+                        <button class="filter-btn" data-category="mystery">Mystery</button>
+                        <button class="filter-btn" data-category="drama">Drama</button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <details>
-            <summary>The Stingy Brother</summary>
-            <img src="image/2.jpg" alt=" Edwin and Elliot" loading="eager">
-            <h2>A Tale of Two Brothers</h2>
-            <p>In the charming village of Willowdale, nestled between rolling hills and winding streams, two brothers, Edwin and Elliot, lived vastly different lives. Edwin, the elder, was notorious for his parsimony, hoarding every coin and possession.</p>
-            <p>Elliot, on the other hand, had a heart of gold, always willing to lend a helping hand. Their differing values created tension between them, but their love for each other remained strong.</p>
-            <p>One fateful day, Elliot approached Edwin with a desperate plea. "Brother, I need your help. Our neighbor, Mrs. Jenkins, faces eviction. Her illness has left her unable to pay rent. Her family will be on the streets if we don't act."</p>
-            <p> Edwin scoffed, "Not my concern. She should've managed her affairs better. I won't waste my hard-earned wealth on someone else's mistakes." </p>
-            <p>Elliot persisted, explaining the consequences of inaction, but Edwin refused. That night, a fierce storm ravaged Willowdale, and a fire broke out, spreading rapidly.</p>
-            <p>The village was engulfed in flames, and Edwin's grand mansion was destroyed, burning his wealth and possessions. He lost everything.</p>
-            <img src="image/2a.jpg" alt="Edwin Mansion Burning" loading="eager">
-            <h2>A Cruel Twist of Fate</h2>
-            <p>As Edwin wandered the ashes of his home, he stumbled upon Mrs. Jenkins, who had also lost everything. Despite her own struggles, she took Edwin in, sharing her last bread and shelter.</p>
-            <p>Edwin was taken aback by her kindness. "Why are you helping me? I refused to aid you," he asked.</p>
-            <p>Mrs. Jenkins smiled. "We're all in this together, Edwin. Your brother Elliot helped us when you wouldn't. Now, it's my turn to help you."</p>
-            <p>Edwin realized too late that his stinginess had cost him everything: his wealth, his home, and his dignity. He felt the weight of his mistakes.</p>
-            <p>Elliot found Edwin, broken and destitute. "Brother, I'm sorry," Edwin whispered, tears streaming down his face. "I understand now. My greed destroyed me."</p>
-            <p>Elliot embraced him. "You're forgiven, brother. Let's rebuild together."</p>
-            <h2>A New Beginning</h2>
-            <p>Edwin learned from his mistakes, and the brothers rebuilt their lives, focusing on kindness and generosity. They helped rebuild Willowdale, supporting those affected by the fire.</p>
-            <p>The village prospered once more, and the brothers' bond grew stronger.</p>
-            <p>Edwin became known for his compassion, and his story served as a cautionary tale about the dangers of greed.</p>
-            <h3>The End.</h3>
-        </details>
+        <section class="stories-section" id="stories">
+            <div class="container">
+                <h2 class="section-title">Featured Stories</h2>
+                <div class="stories-grid" id="stories-grid">
+                    <!-- Fantasy Stories -->
+                    <div class="story-card" data-category="fantasy" data-title="the mask of a prince">
+                        <div class="story-image">
+                            <img src="image/1.jpg" alt="Prince Leon and Princess Elena" loading="eager">
+                            <div class="story-category">Fantasy</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Mask of a Prince</h3>
+                            <p class="story-excerpt">A young prince disguises himself as a commoner to find true love...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 8 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="prince">Read Story</button>
+                        </div>
+                    </div>
 
+                    <div class="story-card" data-category="drama" data-title="the stingy brother">
+                        <div class="story-image">
+                            <img src="image/2.jpg" alt="Edwin and Elliot" loading="eager">
+                            <div class="story-category">Drama</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Stingy Brother</h3>
+                            <p class="story-excerpt">Two brothers with vastly different values face the consequences of their choices...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 6 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="brother">Read Story</button>
+                        </div>
+                    </div>
 
-        <details>
-            <summary>King Malakai</summary>
-            <img src="image/3.jpg" alt="King Malakai" loading="eager">
-            <h2>The Reign of Terror</h2>
-            <p>In the kingdom of Azsar, King Malakai ruled with an iron fist, crushing any dissent. His cruelty and greed knew no bounds, and his subjects lived in constant fear.</p>
-            <p>Malakai's taxes drained the people's pockets, leaving families with barely enough to survive. He enslaved thousands, forcing them to build grand monuments in his honor.</p>
-            <p>The king's advisors warned him of the consequences, but Malakai scoffed, "I am the law. None shall question my authority."</p>
-            <p>Years passed, and Malakai's tyranny intensified:</p>
-                <ul>
-                   <li> &bull; He imposed curfews, restricting movement and gatherings.</li>
-                   <li> &bull; His soldiers pillaged villages, taking food and livestock.</li>
-                   <li> &bull; He forcibly conscripted youth into his army.</li>
-                   <li> &bull; He imprisoned and tortured dissenters.</li>
-                </ul>
-            <br>
-            <p>The people's suffering grew:</p>
-                <ul>
-                   <li> &bull; Families went hungry, with children crying from empty bellies.</li>
-                   <li> &bull; Women were widowed, their husbands taken by Malakai's wars.</li>
-                   <li> &bull; Orphans roamed the streets, forgotten and alone.</li>
-                </ul>
-            <h2>The Prophecy Unfolds</h2>
-            <p>A wise old sage, Ariana, prophesied the king's downfall. "Your cruelty will be your undoing, Malakai. The people will rise, and your kingdom will burn."</p>
-            <p>Malakai laughed, ordering Ariana's execution. But she vanished, leaving behind a cryptic message:</p>
-            <p><strong>"The fire that fuels your ambition will consume you."</strong></p>
-            <p>As Malakai's tyranny worsened, the kingdom trembled on collapse:</p>
-                <ul>
-                   <li> &bull; Crops withered, rivers dried, and disease spread.</li>
-                   <li> &bull; Trade ceased, and commerce collapsed.</li>
-                   <li> &bull; Nobles fled, abandoning their posts.</li>
-                </ul>
-            <br>    
-            <p>The people's patience wore thin. A young rebel, Lyra, emerged, rallying the oppressed.</p>
-            <p>"We will not be silenced! We will not be enslaved!" Lyra declared.</p>
-            <p>The rebellion gained momentum:</p>
-                <ul>
-                    <li> &bull; Rebel warfare erupted in the streets.</li>
-                    <li> &bull; Malakai's soldiers defected, joining the rebels.</li>
-                    <li> &bull; The kingdom's walls crumbled, and Malakai's palace was besieged.</li>
-                </ul>
-            <h2>The Final Confrontation</h2>   
-            <p>Malakai faced Lyra, his sword trembling with rage.</p>
-            <p>"You fools," Malakai spat. "You'll never defeat me."</p>
-            <p>Lyra smiled. "Your own darkness has defeated you, Malakai."</p>
-            <p>As the rebels overpowered Malakai's guards, the king fled, only to find his escape route blocked by a wall of flames.</p>
-            <p><strong>The prophecy had come true.</strong></p>
-            <img src="image/3a.jpg" alt="Walls Of Flames" loading="eager">
-            <p>Malakai's kingdom lay in ruins, his people freed from his tyranny:</p>
-                <ul>
-                    <li> &bull; Lyra established a fair and just government.</li>
-                    <li> &bull; Ariana reappeared, her message clear: "True power lies not in domination, but in compassion."</li>
-                    <li> &bull; The kingdom of Azsar rose from the ashes, its people forever changed.</li>
-                </ul>
-            <br>
-            <p>The people rejoiced, their freedom won.</p>
-            <h3>The End.</h3>
-        </details>
+                    <div class="story-card" data-category="adventure" data-title="king malakai">
+                        <div class="story-image">
+                            <img src="image/3.jpg" alt="King Malakai" loading="eager">
+                            <div class="story-category">Adventure</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">King Malakai</h3>
+                            <p class="story-excerpt">A tyrannical king faces rebellion as his cruelty leads to his downfall...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 10 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="malakai">Read Story</button>
+                        </div>
+                    </div>
 
+                    <div class="story-card" data-category="drama" data-title="from darkness to light">
+                        <div class="story-image">
+                            <img src="image/4.jpg" alt="Asher at 12yrs old!" loading="eager">
+                            <div class="story-category">Drama</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">From Darkness to Light</h3>
+                            <p class="story-excerpt">A young man's journey from tragedy and darkness to love and redemption...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 12 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="darkness">Read Story</button>
+                        </div>
+                    </div>
 
-        <details>
-            <summary>From Darkness to Light</summary>
-            <img src="image/4.jpg" alt="Asher at 12yrs old!" loading="eager">
-            <h2>A Shattered Childhood</h2>
-            <p>Asher's world shattered the night his parents were brutally murdered. He was only 12 years old, left alone and adrift in a sea of grief. The pain was suffocating, and Asher's anger grew with each passing day.</p>
-            <p>He rebelled against authority, seeking solace in a local gang that promised protection and camaraderie. But as he became deeper embroiled in their activities, Asher realized he was losing himself to the darkness.</p>
-            <p>One fateful night, the gang targeted an innocent family, leaving them battered and broken. Asher was horrified, recognizing the same fear and helplessness he had felt when his parents were taken from him. This was the wake-up call he needed.</p>
-            <p>With a heavy heart, Asher made the difficult decision to leave the gang. He knew it wouldn't be easy, but he couldn't continue down a path that betrayed everything his parents had taught him.</p>
-            <p>Asher returned to school, determined to make a change. He met with a guidance counselor, Mrs. Johnson, who introduced him to Emma, a kind-hearted volunteer. Emma listened to Asher's story without judgment, offering words of encouragement and support.</p>
-            <h2>A Brighter Future</h2>
-            <p>Emma saw beyond Asher's scars, recognizing the good in him. She encouraged him to pursue his dreams, and soon they were inseparable.</p>
-            <p>Years passed, and Asher graduated from college, became a social worker, and eventually founded a community center to support families affected by violence.</p>
-            <p>Emma stood by his side, proudly supporting his every step. They married in a beautiful sunset ceremony, surrounded by friends and family.</p>
-            <p>Their love flourished, and soon they welcomed two adorable children, Ava and Elijah. Asher coached Little League, attended PTA meetings, and cherished every moment with his new family.</p>
-            <img src="image/4a.jpg" alt="Asher's Father" loading="eager">
-            <h2>Gratitude and Love</h2>
-            <p>One quiet evening, as they sat on the porch, looking at the twinkling stars, Asher turned to Emma and said, "You saved me from my darkest times. You brought love and light into my life when I needed it most. I’ll always be grateful."</p>
-            <p>Emma's eyes filled with happy tears. She reached out, gently touching his hand. "You saved yourself, Asher. I just helped you see the way."</p>
-            <p>Asher's heart filled with warmth, love, and deep gratitude. In that moment, he knew he had found his true home – in Emma’s arms, where he felt safe, loved, and at peace, surrounded by the laughter and joy of their little family.</p>
-            <h3>The End</h3>
-        </details>
+                    <div class="story-card" data-category="adventure" data-title="the king's fall and the rise of justice">
+                        <div class="story-image">
+                            <img src="image/5.jpg" alt="The Brothers of Goryeo!" loading="eager">
+                            <div class="story-category">Adventure</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The King's Fall and the Rise of Justice</h3>
+                            <p class="story-excerpt">A tale of betrayal, revenge, and justice in ancient Korea...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 15 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="justice">Read Story</button>
+                        </div>
+                    </div>
 
-        <details>
-            <summary>The King's Fall and the Rise of Justice</summary>
-            <img src="image/5.jpg" alt="The Brothers of Goryeo!" loading="eager">
-            <h2>The Rise of Jeonghan</h2>
-            <p>Once in the ancient Korean kingdom of Goryeo, there were two brothers: Jeonghan, the wise and noble king, and his younger brother, Seungjae, who was consumed with envy. Jeonghan ruled with compassion, beloved by his people, while Seungjae resented living in his brother's shadow.</p>
-            <p>Seungjae, driven by ambition and greed, secretly plotted to overthrow his elder brother. He bribed the king’s trusted subjects, guards, and even some of his closest advisors, promising them wealth and power in exchange for their loyalty. One dark night, Seungjae’s plan came to life. The once-trusted guards turned on Jeonghan, and the king was murdered in cold blood. The kingdom was thrown into chaos.</p>
-            <p>Seungjae seized the throne, becoming the new king. Under his rule, the once-prosperous Goryeo began to suffer. He ruled with cruelty, raising taxes and executing anyone who opposed him. The people lived in fear, and the land was filled with despair.</p>
-            <p>But Seungjae was haunted by the sons of his late brother, Jeonghan. Fearful that they might rise against him and reclaim the throne, he began hunting them down. His men searched the kingdom, killing any who carried the blood of Jeonghan. One by one, they fell, until only one remained.</p>
-            <p>That last child, Jeonghan’s youngest son, was saved by the king’s mother—their wise grandmother. She fled with him to a distant province, hiding him away in a remote temple where only a few trusted eunuchs, loyal to the late king, knew of his existence. As the years passed, the boy, Jihoon, grew strong and wise under the tutelage of his grandmother.</p>
-            <img src="image/5a.jpg" alt="Jihoon the young prince" loading="eager">
-            <h2>The Truth Revealed</h2>
-            <p>When Jihoon turned 20, his grandmother revealed the truth about his uncle’s treachery and his father’s murder. “Your uncle, Seungjae, has bathed this land in darkness,” she said. “The blood of your father cries out for justice. It is time for you to reclaim your rightful place.”</p>
-            <p>Jihoon’s heart burned with the desire for justice, not only for his father but for the people who suffered under Seungjae's reign. He trained in the art of war, gathered loyal followers, and set his sights on the palace where his wicked uncle now sat.</p>
-            <p>With the support of the eunuchs and his grandmother’s wisdom, Jihoon launched a rebellion. His followers, many of whom had suffered under Seungjae’s tyranny, stormed the palace. On the night of the full moon, Jihoon confronted Seungjae in the throne room.</p>
-            <p>“You have stolen everything from me,” Jihoon declared, his voice steady with conviction. “But no longer. Tonight, justice will be served.”</p>
-            <p>Seungjae, now a coward in the face of his nephew’s strength, tried to plead for his life. But Jihoon was unwavering. He did not seek bloodlust but justice. He ordered Seungjae to be imprisoned, not killed. The people needed to see the villain punished, not simply replaced.</p>
-            <p>Seungjae was imprisoned in the darkest cell of the kingdom, where he would spend the rest of his days in solitude. But Jihoon, in a final act of mercy, visited him once a year, ensuring his uncle saw the thriving kingdom he had once tried to destroy.</p>
-            <p>Jihoon became a king beloved by all, bringing peace and prosperity to the land, just as his father had. And so, from darkness, the light of justice and mercy was restored to Goryeo.</p>
-            <h3>The End</h3>
-        </details>
+                    <div class="story-card" data-category="mystery" data-title="the clockmaker's secret">
+                        <div class="story-image">
+                            <img src="image/6.webp" alt="A clock crafter" loading="eager">
+                            <div class="story-category">Mystery</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Clockmaker's Secret</h3>
+                            <p class="story-excerpt">A young girl discovers a clockmaker's ability to manipulate time...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 18 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="clockmaker">Read Story</button>
+                        </div>
+                    </div>
 
-        <details>
-            <summary>The Clockmaker's Secret</summary>
-            <img src="image/6.webp" alt="A clock crafter" loading="eager">
-            <h2>A Special Village</h2>
-            <p>In the peaceful village of Eldenwood, Anton was famous for making the best clocks. His shop was filled with all kinds of clocks—big ones, small ones, and colorful ones. People loved to visit his shop not just to buy clocks, but to hear Anton tell stories about time. He had a warm smile and a gentle way of explaining how each clock worked.</p>
-            <p>Clara was a twelve-year-old girl who loved visiting Anton’s shop. She was fascinated by the ticking sounds and the shiny gears inside the clocks. Every Saturday, she would stop by after finishing her chores to watch Anton work. One day, while admiring a big, ornate clock, she noticed something strange: the hands were moving backward. Anton saw her curiosity and smiled.</p>
-            <p>"Would you like to know a secret?" Anton asked Clara. She nodded excitedly. He explained that he could make his clocks change time. If he set them right, he could send someone back in time or speed up the present. Clara’s eyes widened in amazement. But Anton warned her, “This power must be used carefully. It can change everything, and there can be serious consequences.” Clara listened closely, feeling both thrilled and nervous.</p>
-            <h2>The Mystery of Time Travel</h2>
-            <p>One evening, as Clara was leaving the shop, she overheard two villagers talking about a serious problem. They said a cruel nobleman named Lord Harrington wanted to take over Eldenwood for its resources. He had a big army that was coming soon. Clara's heart raced as she ran to Anton, breathless with worry. “We need to do something! The nobleman is coming to destroy our village!” she exclaimed.</p>
-            <p>Anton thought for a moment, then said, “We should use the clocks to find out the nobleman's plans. If we know what he intends to do, we can prepare the village.” Clara's eyes sparkled with determination. “Yes! Let’s do it!” they quickly gathered the necessary tools to set the clock for their journey.</p>
-            <p>Using one of Anton's large clocks, they set the gears in motion. As the clock chimed softly, Clara felt a strange sensation, like being pulled through a tunnel. In a flash, they found themselves three days in the past. They emerged in the same village but in a different time. Excitedly, they set out to gather information.</p>
-            <p>Clara and Anton quietly followed the nobleman’s spies through the village. They hid behind trees and barrels, listening closely to the spies as they talked about their plans. Clara’s heart pounded as she heard them mention the nobleman’s attack strategy. They learned that the nobleman planned to attack at dawn, using the element of surprise.</p>
-            <p>When they returned to the present, Clara felt both excited and worried. They had learned enough to prepare the villagers, but they had to act fast. They rushed to the town square and called a meeting. Villagers gathered, curious about Clara’s urgency.</p>
-            <p>Clara stood in front of the crowd, her voice strong and clear. “We must prepare for an attack! Lord Harrington is coming with his army at dawn. We need to work together to defend our home!” The villagers murmured among themselves, some frightened, but others inspired by Clara’s bravery. Anton stood beside her, encouraging the villagers to unite.</p>
-            <p>The villagers got to work, using whatever they could find to create weapons. Farmers grabbed pitchforks, and blacksmiths forged metal tools. The children helped by gathering stones and building barricades. Clara and Anton ran from person to person, offering help and guidance. Everyone worked late into the night, fueled by their desire to protect their village.</p>
-            <p>As night fell, Clara felt a mix of fear and excitement. She looked at the stars shining above and thought of all the stories Anton had told her about bravery and courage. Anton found her sitting on a wooden bench outside the shop. “You’ve done well, Clara,” he said gently. “You’ve shown great leadership.” Clara smiled, feeling a sense of pride in her heart. They talked late into the night, discussing their hopes for the morning.</p>
-            <img src="image/6a.jpg" alt="" loading="eager">
-            <h2>The Battle for Eldenwood</h2>
-            <p>When dawn arrived, the villagers stood ready. As the sun began to rise, they saw the nobleman’s army approaching. Clara’s heart raced. She took a deep breath and shouted, “Remember, we fight for our home!” The villagers cheered, and their determination filled the air. They took their positions, ready to defend their village.</p>
-            <p>During the chaos of battle, Clara spotted a familiar face among the enemy troops: her childhood friend Lucas, who had joined Lord Harrington's army. Heartbroken but determined, Clara called out to him, “Lucas! Please, come back to us! You know this isn’t right!” Hearing her voice, Lucas hesitated. Memories of their childhood flooded his mind, and he realized he could not fight against his friends.</p>
-            <p>Moved by Clara’s bravery, Lucas turned his back on the nobleman and ran to join the villagers. “I’m with you!” he shouted. His decision inspired others in the nobleman’s army to rethink their choices. With Lucas’s help, the villagers pushed back the nobleman’s forces, fighting fiercely to protect their home.</p>
-            <p>After a long and hard-fought battle, the villagers emerged victorious. The nobleman, realizing he was losing control, ordered his troops to retreat. Clara felt a wave of relief wash over her as the villagers cheered and hugged one another. They had defended Eldenwood against a powerful enemy.</p>
-            <p>In the days following the battle, the village began to heal. Anton decided to teach Clara the art of clockmaking in a more serious way. Together, they started creating clocks that represented hope and strength. Each clock told the story of their village and the bravery of the people.</p>
-            <p>As Clara learned more about clockmaking, she became skilled in the craft. She designed clocks that not only told time but also inspired people. Each clock had unique designs, with engravings of the village and symbols of courage. The villagers admired her work, and the shop became a gathering place for everyone.</p>
-            <p>Years later, Clara stood in the shop, now a master clockmaker. She was teaching young apprentices how to create clocks and share stories about time. The shop was filled with laughter, and the ticking of the clocks reminded everyone of their brave history. Clara felt proud to pass on the lessons she had learned.</p>
-            <p>The village of Eldenwood flourished. The people were closer than ever, united by their experiences. Clara and Anton often shared stories of the battle and the importance of courage and friendship. The clocks in the shop were not just about telling time; they symbolized the love and unity of Eldenwood.</p>
-            <h3>The End</h3>
-        </details>
+                    <!-- New Stories -->
+                    <div class="story-card" data-category="romance" data-title="the lighthouse keeper's daughter">
+                        <div class="story-image">
+                            <img src="image/1.jpg" alt="Lighthouse and ocean" loading="eager">
+                            <div class="story-category">Romance</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Lighthouse Keeper's Daughter</h3>
+                            <p class="story-excerpt">A mysterious stranger washes ashore during a storm, changing everything...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 9 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="lighthouse">Read Story</button>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-category="fantasy" data-title="the last dragon rider">
+                        <div class="story-image">
+                            <img src="image/2.jpg" alt="Dragon and rider" loading="eager">
+                            <div class="story-category">Fantasy</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Last Dragon Rider</h3>
+                            <p class="story-excerpt">In a world where dragons are extinct, one young woman discovers the last egg...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 14 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="dragon">Read Story</button>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-category="mystery" data-title="the vanishing library">
+                        <div class="story-image">
+                            <img src="image/3.jpg" alt="Mysterious library" loading="eager">
+                            <div class="story-category">Mystery</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Vanishing Library</h3>
+                            <p class="story-excerpt">A librarian discovers that books are disappearing from the shelves at night...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 11 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="library">Read Story</button>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-category="adventure" data-title="the time traveler's journal">
+                        <div class="story-image">
+                            <img src="image/4.jpg" alt="Old journal" loading="eager">
+                            <div class="story-category">Adventure</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Time Traveler's Journal</h3>
+                            <p class="story-excerpt">A scientist finds a journal that predicts the future with terrifying accuracy...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 13 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="time">Read Story</button>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-category="romance" data-title="letters from the past">
+                        <div class="story-image">
+                            <img src="image/5.jpg" alt="Old letters" loading="eager">
+                            <div class="story-category">Romance</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">Letters from the Past</h3>
+                            <p class="story-excerpt">A woman discovers love letters from WWII that change her perspective on love...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 7 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="letters">Read Story</button>
+                        </div>
+                    </div>
+
+                    <div class="story-card" data-category="fantasy" data-title="the enchanted forest">
+                        <div class="story-image">
+                            <img src="image/6.webp" alt="Magical forest" loading="eager">
+                            <div class="story-category">Fantasy</div>
+                        </div>
+                        <div class="story-content">
+                            <h3 class="story-title">The Enchanted Forest</h3>
+                            <p class="story-excerpt">A young explorer discovers a forest where time moves differently...</p>
+                            <div class="story-meta">
+                                <span class="reading-time"><i class="fas fa-clock"></i> 10 min read</span>
+                                <span class="story-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                            <button class="read-story-btn" data-story="forest">Read Story</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Story Modal -->
+    <div class="story-modal" id="story-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Story content will be loaded here -->
+            </div>
+        </div>
     </div>
 
-    <div class="feedback-form" id="feedback-form">
-        <h2>Feedback Form</h2>
-        <form id="form" method="post" onsubmit="return validateEmail()">
-            <button class="cancel-button">X</button>
-            <input type="hidden" name="access_key" value="a7d50f34-c4ae-4234-ae18-266f69961a3b">
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email"  id="email" name="email" placeholder="Your Email" required>
-            <textarea  id="message" name="message" rows="5" placeholder="What story do you like most?" required></textarea>
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            <button type="submit" >Submit Feedback</button>
+    <!-- Feedback Modal -->
+    <div class="feedback-modal" id="feedback-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Share Your Feedback</h2>
+                <button class="close-feedback">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="feedback-form" method="post">
+                    <input type="hidden" name="access_key" value="a7d50f34-c4ae-4234-ae18-266f69961a3b">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="story_rating" id="story_rating" required>
+                            <option value="">Rate this story</option>
+                            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                            <option value="4">⭐⭐⭐⭐ Good</option>
+                            <option value="3">⭐⭐⭐ Average</option>
+                            <option value="2">⭐⭐ Below Average</option>
+                            <option value="1">⭐ Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us what you think about this story..." required></textarea>
+                    </div>
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                    <button type="submit" class="submit-btn">Submit Feedback</button>
+                    <div id="result"></div>
+                </form>
+            </div>
+        </div>
+    </footer>
 
-            <div id="result"></div>
-
-        </form>
-    </div>
-    <footer>© 2024 StoryHub. All rights reserved.</footer>
-    <script src="story.js"></script> 
+    <script src="story.js"></script>
 </body>
 </html>
