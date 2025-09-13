@@ -1,41 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap');
 
-*{
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-color: #10b981;
+    --accent-hover: #059669;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #64748b;
+    --border-color: #334155;
+    --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    color: #fff;
-    background-color: #000000;
-    height: 100vh;
-    font-family: "Poppins", sans-serif;
+    color: var(--text-primary);
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #1e293b 100%);
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
 #story-container {
     height: 95vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+    z-index: 5;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-xl);
+}
+
+.cta-button i {
+    font-size: 1.2rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
 }
 
 span i {
-    color: rgb(0, 255, 0);
+    color: var(--accent-color);
 }
 
 span {
-    color: rgb(0, 255, 0);
+    color: var(--accent-color);
 }
 
 .overlay {
     position: absolute;
-    top: 20px;  /* Adjust as needed */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    color: whitesmoke;
+    transform: translate(-50%, -50%);
+    color: var(--text-primary);
     text-align: center;
-    z-index: 10;  /* Ensure it's above the 3D content */
-    font-family: "Poppins", sans-serif;
+    z-index: 10;
+    font-family: "Inter", sans-serif;
+    max-width: 90%;
 }
 
 h1 {
@@ -51,37 +141,155 @@ p {
 
 footer {
     font-size: 15px;
-    color: rgb(0, 255, 0);
+    color: var(--text-secondary);
     text-align: center;
-    font-weight: bolder;
-    padding-bottom: 10px;
-
+    font-weight: 500;
+    padding: 2rem 0;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
 }
 
 
-@media screen and (max-width: 600px) {
-    h1 {
-        font-size: 23px;
-        font-weight: 600;
-    }
+/* Features Section */
+.features-section {
+    padding: 5rem 0;
+    background: var(--bg-card);
+}
 
-    p {
-        font-size: 15px;
-        font-weight: 500;
-        margin: 14px auto;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--bg-dark);
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-xl);
+}
+
+.feature-icon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .features-section {
+        padding: 3rem 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
     }
     
     footer {
-        font-size: 12px;
+        font-size: 14px;
+        padding: 1.5rem 0;
     }
-   
 }
 
 @media screen and (max-width: 400px) {
-    p {
-        font-size: 13px;
-        font-weight: 500;
-        margin: 14px auto;
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
     }
 }
 
