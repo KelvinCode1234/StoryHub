@@ -15,6 +15,15 @@
     --border: rgba(0,255,0,0.12);
 }
 
+[data-theme="light"] {
+    --bg: #f7faf7;
+    --text: #0e2010;
+    --muted: #246b24;
+    --brand: #15803d;
+    --card: #ffffff;
+    --border: rgba(21,128,61,0.25);
+}
+
 body {
     color: var(--text);
     background-color: var(--bg);

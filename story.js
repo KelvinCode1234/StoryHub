@@ -122,12 +122,87 @@ const searchInput = document.getElementById('search');
 const storiesContainer = document.getElementById('stories');
 if (searchInput && storiesContainer) {
   const allDetails = Array.from(storiesContainer.querySelectorAll('details'));
-  searchInput.addEventListener('input', () => {
-    const query = searchInput.value.trim().toLowerCase();
+  const sortSelect = document.getElementById('sort');
+  // Build tag filter chips
+  const tagFiltersRoot = document.getElementById('tag-filters');
+  if (tagFiltersRoot) {
+    const tagSet = new Set();
     allDetails.forEach(d => {
-      const title = (d.querySelector('summary')?.textContent || '').toLowerCase();
-      const match = title.includes(query);
-      d.style.display = match ? '' : 'none';
+      (d.getAttribute('data-tags') || '')
+        .split(',')
+        .map(t => t.trim())
+        .filter(Boolean)
+        .forEach(t => tagSet.add(t));
     });
-  });
+    const selectedTags = new Set();
+    tagSet.forEach(tag => {
+      const chip = document.createElement('button');
+      chip.type = 'button';
+      chip.className = 'tag-chip';
+      chip.setAttribute('aria-pressed', 'false');
+      chip.textContent = tag;
+      chip.addEventListener('click', () => {
+        if (selectedTags.has(tag)) {
+          selectedTags.delete(tag);
+          chip.classList.remove('active');
+          chip.setAttribute('aria-pressed', 'false');
+        } else {
+          selectedTags.add(tag);
+          chip.classList.add('active');
+          chip.setAttribute('aria-pressed', 'true');
+        }
+        applyFilters();
+      });
+      tagFiltersRoot.appendChild(chip);
+    });
+
+    function matchesTags(d) {
+      if (selectedTags.size === 0) return true;
+      const tags = new Set((d.getAttribute('data-tags') || '')
+        .split(',')
+        .map(t => t.trim())
+        .filter(Boolean));
+      for (const t of selectedTags) {
+        if (!tags.has(t)) return false;
+      }
+      return true;
+    }
+
+    function matchesQuery(d, query) {
+      if (!query) return true;
+      const title = (d.querySelector('summary')?.textContent || '').toLowerCase();
+      return title.includes(query);
+    }
+
+    function applyFilters() {
+      const query = searchInput.value.trim().toLowerCase();
+      allDetails.forEach(d => {
+        const visible = matchesQuery(d, query) && matchesTags(d);
+        d.style.display = visible ? '' : 'none';
+      });
+    }
+
+    // Search ties into same filter application
+    searchInput.addEventListener('input', applyFilters);
+
+    // Sorting
+    if (sortSelect) {
+      const originalOrder = Array.from(allDetails);
+      sortSelect.addEventListener('change', () => {
+        const value = sortSelect.value;
+        if (value === 'default') {
+          originalOrder.forEach(node => storiesContainer.appendChild(node));
+        } else {
+          const visibleDetails = Array.from(storiesContainer.querySelectorAll('details'));
+          visibleDetails.sort((a, b) => {
+            const ta = (a.querySelector('summary')?.textContent || '').toLowerCase();
+            const tb = (b.querySelector('summary')?.textContent || '').toLowerCase();
+            if (value === 'az') return ta.localeCompare(tb);
+            if (value === 'za') return tb.localeCompare(ta);
+            return 0;
+          }).forEach(node => storiesContainer.appendChild(node));
+        }
+      });
+    }
+  }
 }

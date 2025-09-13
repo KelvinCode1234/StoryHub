@@ -7,6 +7,7 @@
     <title>Story Page</title>
     <link rel="icon" type="image/png" href="image/z.png">
     <link rel="stylesheet" href="story.css">
+    <script defer src="theme.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -16,6 +17,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="story.html">Stories</a></li>
                 <li><a href="#contact" class="cta">Contact</a></li>
+                <li><button id="theme-toggle" class="cta" type="button" aria-label="Toggle theme">Theme</button></li>
             </ul>
         </nav>
     </header>
@@ -23,8 +25,17 @@
     <div class="search-bar">
         <input id="search" type="search" placeholder="Search stories by title..." aria-label="Search stories">
     </div>
+    <div class="toolbar">
+        <label for="sort" class="sr-only">Sort stories</label>
+        <select id="sort" aria-label="Sort stories">
+            <option value="default">Sort: Default</option>
+            <option value="az">Title A–Z</option>
+            <option value="za">Title Z–A</option>
+        </select>
+    </div>
+    <div id="tag-filters" class="tag-filters" role="group" aria-label="Filter by tags"></div>
     <div class="story-container" id="stories">
-        <details>
+        <details data-tags="romance,royalty,disguise,village">
             <summary >The Mask of a Prince</summary>
             <img src="image/1.jpg" alt="Prince Leon and Princess Elena" loading="eager">
             <h2>Once Upon a Time</h2>
@@ -62,7 +73,7 @@
         </details>
 
 
-        <details>
+        <details data-tags="moral,family,redemption,village">
             <summary>The Stingy Brother</summary>
             <img src="image/2.jpg" alt=" Edwin and Elliot" loading="eager">
             <h2>A Tale of Two Brothers</h2>
@@ -88,7 +99,7 @@
         </details>
 
 
-        <details>
+        <details data-tags="rebellion,tyranny,fantasy,prophecy">
             <summary>King Malakai</summary>
             <img src="image/3.jpg" alt="King Malakai" loading="eager">
             <h2>The Reign of Terror</h2>
@@ -147,7 +158,7 @@
         </details>
 
 
-        <details>
+        <details data-tags="redemption,family,coming-of-age,crime">
             <summary>From Darkness to Light</summary>
             <img src="image/4.jpg" alt="Asher at 12yrs old!" loading="eager">
             <h2>A Shattered Childhood</h2>
@@ -169,7 +180,7 @@
             <h3>The End</h3>
         </details>
 
-        <details>
+        <details data-tags="royalty,justice,rebellion,history">
             <summary>The King's Fall and the Rise of Justice</summary>
             <img src="image/5.jpg" alt="The Brothers of Goryeo!" loading="eager">
             <h2>The Rise of Jeonghan</h2>
@@ -190,8 +201,40 @@
             <h3>The End</h3>
         </details>
 
-        <details>
+        <details data-tags="fantasy,time,village,bravery">
             <summary>The Clockmaker's Secret</summary>
+        <details data-tags="mystery,fantasy,library,prophecy">
+            <summary>The Whispering Library</summary>
+            <img src="image/1.jpg" alt="Ancient library at dusk" loading="eager">
+            <h2>Books That Breathe</h2>
+            <p>On the edge of Mirewood stood a library that never closed. Villagers swore they heard pages turning when no one was inside, as if the books were breathing. Elara, an apprentice scribe, discovered a margin note that answered a question she had not yet asked.</p>
+            <p>Each night she returned and the notes grew bolder: warnings, riddles, names of people she had not met—yet. When a storm cut the village from the world, the library’s shelves shifted like a maze to reveal a hidden reading room.</p>
+            <h2>The Librarian’s Vow</h2>
+            <p>There, a candlelit ledger recorded debts of kindness and cruelty owed by every villager. Elara realized the library whispered to balance the scales. She chose to write her own vow in the ledger: to lend her voice to those who had none.</p>
+            <h3>The End.</h3>
+        </details>
+
+        <details data-tags="city,inspiration,innovation,adventure">
+            <summary>Saffron Skies</summary>
+            <img src="image/2.jpg" alt="Hot air balloons over a desert city" loading="eager">
+            <h2>A City Above the Heat</h2>
+            <p>In Qantara, the streets burn by noon, so life happens in the sky. Merchants tie their stalls to slow-drifting balloons, children race kites that carry messages between rooftops, and wedding vows are spoken at sunset where the air is cool.</p>
+            <p>Amir, a rope-maker, dreams of a bridge of silk between the poorest quarter and the markets above. He weaves by moonlight, strand by strand, while the city laughs at the idea.</p>
+            <h2>The First Crossing</h2>
+            <p>When the winds snap the high-market tethers, Amir anchors his silk bridge across the quarter’s tallest mast. One by one, families cross to safety. The city stops laughing.</p>
+            <h3>The End.</h3>
+        </details>
+
+        <details data-tags="environment,redemption,community,hope">
+            <summary>Ember and the River</summary>
+            <img src="image/3.jpg" alt="A child at a glowing river" loading="eager">
+            <h2>Fire That Floats</h2>
+            <p>They called her Ember because fireflies landed on her hands and stayed. When the river turned dark with oil from the ironworks, the fireflies refused to cross. Fish vanished. The town dimmed.</p>
+            <p>Ember learned to guide the fireflies over the water in a slow bright ribbon. Where their light lingered, the oil thinned and lilies rose. The ironworks owner watched in silence as his reflection returned to the river—so did his shame.</p>
+            <h2>A Different Kind of Power</h2>
+            <p>He shut the furnaces and built waterwheels instead. At the rededication, the fireflies formed a bridge of light and the town crossed together.</p>
+            <h3>The End.</h3>
+        </details>
             <img src="image/6.webp" alt="A clock crafter" loading="eager">
             <h2>A Special Village</h2>
             <p>In the peaceful village of Eldenwood, Anton was famous for making the best clocks. His shop was filled with all kinds of clocks—big ones, small ones, and colorful ones. People loved to visit his shop not just to buy clocks, but to hear Anton tell stories about time. He had a warm smile and a gentle way of explaining how each clock worked.</p>
