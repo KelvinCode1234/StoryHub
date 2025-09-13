@@ -3,20 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StoryHub</title>
+    <title>StoryHub - Discover Amazing Stories</title>
+    <meta name="description" content="Immerse yourself in captivating stories from around the world. Discover tales of adventure, romance, mystery, and more.">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="/z.png">
+    <link rel="icon" type="image/x-icon" href="image/z.png">
     <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="overlay">
-        <h1>Welcome to <span>Story</span>Hub</h1>
-        <p>Click the <span><i class="fa-solid fa-cube" loading="eager"></i></span> to continue!</p>
+    <div id="story-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to StoryHub</h1>
+                <p class="hero-subtitle">Discover captivating stories that transport you to new worlds, inspire your imagination, and touch your heart.</p>
+                <button class="cta-button" onclick="enterStories()">
+                    <i class="fas fa-book-open"></i>
+                    Explore Stories
+                </button>
+            </div>
+        </div>
     </div>
-    <div id="story-container"></div>
+    
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose StoryHub?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Curated Collection</h3>
+                    <p>Handpicked stories across multiple genres, each crafted to deliver an unforgettable reading experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Read your favorite stories anywhere, anytime with our responsive design optimized for all devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Emotional Journey</h3>
+                    <p>Experience stories that range from heartwarming tales to thrilling adventures, each designed to evoke emotion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
-    <footer>Created by PreshCode</footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StoryHub. All rights reserved. | Created with ❤️ by PreshCode</p>
+        </div>
+    </footer>
 </body>
 </html>
 

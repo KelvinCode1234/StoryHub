@@ -1,47 +1,85 @@
 
+// 3D Scene Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0x000000, 0);
 document.getElementById('story-container').appendChild(renderer.domElement);
 
+// Create multiple floating geometric shapes
+const shapes = [];
+const geometries = [
+    new THREE.BoxGeometry(0.5, 0.5, 0.5),
+    new THREE.SphereGeometry(0.3, 16, 16),
+    new THREE.OctahedronGeometry(0.4),
+    new THREE.TetrahedronGeometry(0.4)
+];
 
-const geometry = new THREE.BoxGeometry();
-const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-const cube = new THREE.Mesh(geometry, material);
-scene.add(cube);
+const colors = [0x2563eb, 0x10b981, 0x8b5cf6, 0xf59e0b];
 
-
-camera.position.z = 5;
-
-
-const raycaster = new THREE.Raycaster();
-const mouse = new THREE.Vector2();
-
-window.addEventListener('click', (event) => {
-    // Calculate mouse position in normalized device coordinates
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
-
-    // Update the raycaster with the camera and mouse position
-    raycaster.setFromCamera(mouse, camera);
+for (let i = 0; i < 15; i++) {
+    const geometry = geometries[Math.floor(Math.random() * geometries.length)];
+    const material = new THREE.MeshBasicMaterial({ 
+        color: colors[Math.floor(Math.random() * colors.length)],
+        transparent: true,
+        opacity: 0.7
+    });
+    const shape = new THREE.Mesh(geometry, material);
     
-    // Calculate objects intersecting the picking ray
-    const intersects = raycaster.intersectObjects([cube]);
+    shape.position.x = (Math.random() - 0.5) * 20;
+    shape.position.y = (Math.random() - 0.5) * 20;
+    shape.position.z = (Math.random() - 0.5) * 20;
+    
+    shape.userData = {
+        rotationSpeed: {
+            x: (Math.random() - 0.5) * 0.02,
+            y: (Math.random() - 0.5) * 0.02,
+            z: (Math.random() - 0.5) * 0.02
+        },
+        floatSpeed: Math.random() * 0.01 + 0.005
+    };
+    
+    shapes.push(shape);
+    scene.add(shape);
+}
 
-    if (intersects.length > 0) {
-        // Redirect to the story page
+camera.position.z = 8;
+
+// Function to navigate to stories
+function enterStories() {
+    // Add smooth transition effect
+    document.body.style.transition = 'opacity 0.5s ease-out';
+    document.body.style.opacity = '0';
+    
+    setTimeout(() => {
         window.location.href = 'story.html';
-    }
-});
+    }, 500);
+}
 
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    
+    shapes.forEach((shape, index) => {
+        // Rotate shapes
+        shape.rotation.x += shape.userData.rotationSpeed.x;
+        shape.rotation.y += shape.userData.rotationSpeed.y;
+        shape.rotation.z += shape.userData.rotationSpeed.z;
+        
+        // Float movement
+        shape.position.y += Math.sin(Date.now() * shape.userData.floatSpeed + index) * 0.01;
+    });
+    
     renderer.render(scene, camera);
 }
+
+// Handle window resize
+window.addEventListener('resize', () => {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+});
 
 animate();
 

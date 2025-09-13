@@ -1,10 +1,77 @@
 
-document.getElementById('feedback-form').style.display = 'none';
+// Story functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Story toggle functionality
+    const storyDetails = document.querySelectorAll('.story-details');
+    storyDetails.forEach(story => {
+        const summary = story.querySelector('.story-summary');
+        const content = story.querySelector('.story-full-content');
+        
+        summary.addEventListener('click', () => {
+            const isOpen = content.style.display !== 'none';
+            
+            // Close all other stories
+            storyDetails.forEach(otherStory => {
+                if (otherStory !== story) {
+                    otherStory.querySelector('.story-full-content').style.display = 'none';
+                }
+            });
+            
+            // Toggle current story
+            content.style.display = isOpen ? 'none' : 'block';
+        });
+    });
 
-setTimeout(function() {
-  document.getElementById('feedback-form').style.display = 'block';
-  document.querySelector('.cancel-button').style.display = 'none'; 
-}, 238800);
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(otherBtn => otherBtn.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const genre = btn.dataset.genre;
+            
+            // Filter stories
+            storyDetails.forEach(story => {
+                if (genre === 'all' || story.dataset.genre === genre) {
+                    story.style.display = 'block';
+                } else {
+                    story.style.display = 'none';
+                }
+                // Close all stories when filtering
+                story.querySelector('.story-full-content').style.display = 'none';
+            });
+        });
+    });
+
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            storyDetails.forEach(story => {
+                const title = story.querySelector('.story-summary').textContent.toLowerCase();
+                const content = story.querySelector('.story-full-content').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    story.style.display = 'block';
+                } else {
+                    story.style.display = 'none';
+                }
+            });
+        });
+    }
+
+    // Initialize feedback form
+    document.getElementById('feedback-form').style.display = 'none';
+
+    setTimeout(function() {
+        document.getElementById('feedback-form').style.display = 'block';
+        document.querySelector('.cancel-button').style.display = 'none'; 
+    }, 238800);
+});
 
 
 const form = document.getElementById('form');

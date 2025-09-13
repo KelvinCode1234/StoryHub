@@ -3,53 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Story Page</title>
+    <title>StoryHub - Discover Amazing Stories</title>
+    <meta name="description" content="Read captivating stories from different genres including romance, adventure, fantasy, and drama.">
     <link rel="icon" type="image/x-icon" href="image/z.png">
     <link rel="stylesheet" href="story.css">
+    <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1> Series Page </h1>
-    <div class="story-container">
-        <details>
-            <summary >The Mask of a Prince</summary>
-            <img src="image/1.jpg" alt="Prince Leon and Princess Elena" loading="eager">
-            <h2>Once Upon a Time</h2>
-            <p>In a faraway kingdom, a young prince named Leon lived a life of luxury, poised to inherit the throne of Verdantia. However, beneath the glittering façade of royal life, Leon felt a profound emptiness. He longed for genuine love, a connection that transcended the superficial nature of the court.</p>
-            <p>Every day, the grand halls of the castle were filled with noble ladies, all vying for the prince's attention. They wore shimmering gowns and spoke with sweet voices, but Leon could see through their rehearsed lines and practiced smiles. None seemed to care about the real him; they only desired his title and the luxurious life that came with it.</p>
-            <p>Heartbroken, Leon made a bold decision: he would disguise himself as a commoner and venture into the bustling village beyond the castle walls to find someone who would love him for who he truly was.</p>
-            <p>One moonlit night, Leon donned a simple cloak, traded his princely attire for worn-out clothes, and slipped away from the castle. He took a deep breath, feeling both exhilarated and nervous as he stepped into the vibrant streets of Verdantia.</p>
-            <p>As he wandered through the lively marketplace, he marveled at the authenticity of the villagers. They were carefree, filled with joy that seemed to evade him within the confines of the castle. Leon approached a group of children playing with a makeshift ball made of rags and leaves. Joining them, he laughed and kicked the ball, forgetting his royal burdens for a moment.</p>
-            <p>Days turned into weeks as Leon explored the village under his disguise. He worked at a local bakery, where he learned to knead dough and bake bread. He made friends with the townsfolk, sharing stories and laughter, but still, he felt something was missing.</p>
-            <h2>Meeting Elena</h2>
-            <p>It was then that he met Elena, a spirited young woman known for her bright smile and kind heart. She had a fiery passion for life, always helping her neighbors and nurturing the community. Leon was drawn to her warmth, and they quickly became friends.</p>
-            <p>They spent long afternoons together, talking about their dreams and aspirations, and exploring the rolling hills surrounding the village. As time passed, Leon found himself falling for her. Elena, too, seemed to sense a deeper connection, but he hesitated to reveal his true identity, fearing that once she learned he was a prince, she would see him as nothing more than a title.</p>
-            <p>One afternoon, while walking through a meadow filled with wildflowers, Elena looked at Leon with a serious expression. “You know, there’s something about you that feels different. You carry a weight on your shoulders. What is it?”</p>
-            <p>Leon’s heart raced. Should he tell her the truth? He took a deep breath and began to share his story. He told her about the pressures of being a prince, the loneliness that came with it, and how he had disguised himself to find someone who would love him for who he truly was.</p>
-            <p>Elena listened intently, her eyes wide with surprise. “You mean you’re a prince? All this time, you’ve been pretending to be someone else?”</p>
-            <p>“Yes,” he admitted, his voice low. “I thought I could find someone who loves me, not for my title, but for who I am. But now I fear I’ve lost something precious.”</p>
-            <p>Elena looked down, contemplating his words. “Leon, I care for you deeply. It doesn’t matter to me what title you hold. You have shown me kindness, laughter, and friendship. I fell in love with the man, not the prince.”</p>
-            <p>Relief washed over him, and he took her hands in his. “You truly mean that?”</p>
-            <p>“Of course! You are brave and genuine, and that is what I admire most about you,” she replied, her voice steady.</p>
-            <p>With newfound courage, Leon kissed her softly, realizing that he had found exactly what he had been searching for—a love that was real and true.</p>
-            <h2>A Royal Return</h2>
-            <p>Leon knew he had to return to the castle, not only to ease his father’s worries but to make a decision about his future. He took Elena back to the castle, their hands intertwined, hearts racing.</p>
-            <p>As they entered the grand hall, the courtiers gasped in disbelief. The king stood up, his face a mixture of anger and relief. “Leon! Where have you been? We feared you were lost!”</p>
-            <p>“I was lost, Father,” Leon replied, his voice strong. “But I found my way back, and I’ve discovered something far more valuable than riches or titles.”</p>
-            <p>With that, he stepped aside and introduced Elena to the court. “This is Elena, the woman who has shown me the true meaning of love. I wish to marry her.”</p>
-            <p>The room fell silent. The king, after a moment of shock, stepped forward. “You wish to marry a commoner? Why, my son?”</p>
-            <p>Leon looked at his father with determination. “Because she loves me for who I am, not for my crown. She brings me joy and laughter, something I’ve never found in the court. I want to be happy.”</p>
-            <img src="image/1a.jpg" alt="Leon And His Father" loading="eager">
-            <h2>A Royal Blessing</h2>
-            <p>After what felt like an eternity, the king’s stern expression softened. “If she makes you happy, then I will accept her as my daughter-in-law. A true king should always seek happiness, even if it lies outside the bounds of tradition.”</p>
-            <p>Cheers erupted in the hall as the courtiers welcomed Elena. The royal wedding was a grand celebration, a joyous union of love that brought the kingdom together.</p>
-            <p>Leon and Elena ruled Verdantia with compassion and understanding, always prioritizing the well-being of their people. They often visited the village, never forgetting the roots of their love.</p>
-            <p>And so, the prince who had pretended to be a commoner found his true identity in love, and they lived happily ever after, proving that the most important title one could hold is that of being true to oneself.</p>
-            <h3>The End!</h3>
-        </details>
+    <!-- Header -->
+    <header class="story-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">StoryHub</a>
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search stories..." id="searchInput">
+            </div>
+            <button class="cta-button" onclick="location.href='index.html'">
+                <i class="fas fa-home"></i>
+                Home
+            </button>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="story-container">
+        <h1 class="page-title">Our Story Collection</h1>
+        
+        <!-- Genre Filter -->
+        <div class="filter-container">
+            <button class="filter-btn active" data-genre="all">All Stories</button>
+            <button class="filter-btn" data-genre="romance">Romance</button>
+            <button class="filter-btn" data-genre="drama">Drama</button>
+            <button class="filter-btn" data-genre="fantasy">Fantasy</button>
+            <button class="filter-btn" data-genre="adventure">Adventure</button>
+            <button class="filter-btn" data-genre="mystery">Mystery</button>
+        </div>
+        <!-- Story 1: The Mask of a Prince -->
+        <div class="story-details" data-genre="romance">
+            <div class="story-summary">The Mask of a Prince</div>
+            <div class="story-full-content" style="display: none;">
+                <img src="image/1.jpg" alt="Prince Leon and Princess Elena" loading="eager">
+                <h2>Once Upon a Time</h2>
+                <p>In a faraway kingdom, a young prince named Leon lived a life of luxury, poised to inherit the throne of Verdantia. However, beneath the glittering façade of royal life, Leon felt a profound emptiness. He longed for genuine love, a connection that transcended the superficial nature of the court.</p>
+                <p>Every day, the grand halls of the castle were filled with noble ladies, all vying for the prince's attention. They wore shimmering gowns and spoke with sweet voices, but Leon could see through their rehearsed lines and practiced smiles. None seemed to care about the real him; they only desired his title and the luxurious life that came with it.</p>
+                <p>Heartbroken, Leon made a bold decision: he would disguise himself as a commoner and venture into the bustling village beyond the castle walls to find someone who would love him for who he truly was.</p>
+                <p>One moonlit night, Leon donned a simple cloak, traded his princely attire for worn-out clothes, and slipped away from the castle. He took a deep breath, feeling both exhilarated and nervous as he stepped into the vibrant streets of Verdantia.</p>
+                <p>As he wandered through the lively marketplace, he marveled at the authenticity of the villagers. They were carefree, filled with joy that seemed to evade him within the confines of the castle. Leon approached a group of children playing with a makeshift ball made of rags and leaves. Joining them, he laughed and kicked the ball, forgetting his royal burdens for a moment.</p>
+                <p>Days turned into weeks as Leon explored the village under his disguise. He worked at a local bakery, where he learned to knead dough and bake bread. He made friends with the townsfolk, sharing stories and laughter, but still, he felt something was missing.</p>
+                <h2>Meeting Elena</h2>
+                <p>It was then that he met Elena, a spirited young woman known for her bright smile and kind heart. She had a fiery passion for life, always helping her neighbors and nurturing the community. Leon was drawn to her warmth, and they quickly became friends.</p>
+                <p>They spent long afternoons together, talking about their dreams and aspirations, and exploring the rolling hills surrounding the village. As time passed, Leon found himself falling for her. Elena, too, seemed to sense a deeper connection, but he hesitated to reveal his true identity, fearing that once she learned he was a prince, she would see him as nothing more than a title.</p>
+                <p>One afternoon, while walking through a meadow filled with wildflowers, Elena looked at Leon with a serious expression. "You know, there's something about you that feels different. You carry a weight on your shoulders. What is it?"</p>
+                <p>Leon's heart raced. Should he tell her the truth? He took a deep breath and began to share his story. He told her about the pressures of being a prince, the loneliness that came with it, and how he had disguised himself to find someone who would love him for who he truly was.</p>
+                <p>Elena listened intently, her eyes wide with surprise. "You mean you're a prince? All this time, you've been pretending to be someone else?"</p>
+                <p>"Yes," he admitted, his voice low. "I thought I could find someone who loves me, not for my title, but for who I am. But now I fear I've lost something precious."</p>
+                <p>Elena looked down, contemplating his words. "Leon, I care for you deeply. It doesn't matter to me what title you hold. You have shown me kindness, laughter, and friendship. I fell in love with the man, not the prince."</p>
+                <p>Relief washed over him, and he took her hands in his. "You truly mean that?"</p>
+                <p>"Of course! You are brave and genuine, and that is what I admire most about you," she replied, her voice steady.</p>
+                <p>With newfound courage, Leon kissed her softly, realizing that he had found exactly what he had been searching for—a love that was real and true.</p>
+                <h2>A Royal Return</h2>
+                <p>Leon knew he had to return to the castle, not only to ease his father's worries but to make a decision about his future. He took Elena back to the castle, their hands intertwined, hearts racing.</p>
+                <p>As they entered the grand hall, the courtiers gasped in disbelief. The king stood up, his face a mixture of anger and relief. "Leon! Where have you been? We feared you were lost!"</p>
+                <p>"I was lost, Father," Leon replied, his voice strong. "But I found my way back, and I've discovered something far more valuable than riches or titles."</p>
+                <p>With that, he stepped aside and introduced Elena to the court. "This is Elena, the woman who has shown me the true meaning of love. I wish to marry her."</p>
+                <p>The room fell silent. The king, after a moment of shock, stepped forward. "You wish to marry a commoner? Why, my son?"</p>
+                <p>Leon looked at his father with determination. "Because she loves me for who I am, not for my crown. She brings me joy and laughter, something I've never found in the court. I want to be happy."</p>
+                <img src="image/1a.jpg" alt="Leon And His Father" loading="eager">
+                <h2>A Royal Blessing</h2>
+                <p>After what felt like an eternity, the king's stern expression softened. "If she makes you happy, then I will accept her as my daughter-in-law. A true king should always seek happiness, even if it lies outside the bounds of tradition."</p>
+                <p>Cheers erupted in the hall as the courtiers welcomed Elena. The royal wedding was a grand celebration, a joyous union of love that brought the kingdom together.</p>
+                <p>Leon and Elena ruled Verdantia with compassion and understanding, always prioritizing the well-being of their people. They often visited the village, never forgetting the roots of their love.</p>
+                <p>And so, the prince who had pretended to be a commoner found his true identity in love, and they lived happily ever after, proving that the most important title one could hold is that of being true to oneself.</p>
+                <h3>The End!</h3>
+            </div>
+        </div>
 
-        <details>
-            <summary>The Stingy Brother</summary>
+        <!-- Story 2: The Stingy Brother -->
+        <div class="story-details" data-genre="drama">
+            <div class="story-summary">The Stingy Brother</div>
+            <div class="story-full-content" style="display: none;">
             <img src="image/2.jpg" alt=" Edwin and Elliot" loading="eager">
             <h2>A Tale of Two Brothers</h2>
             <p>In the charming village of Willowdale, nestled between rolling hills and winding streams, two brothers, Edwin and Elliot, lived vastly different lives. Edwin, the elder, was notorious for his parsimony, hoarding every coin and possession.</p>
@@ -203,8 +235,86 @@
             <p>Years later, Clara stood in the shop, now a master clockmaker. She was teaching young apprentices how to create clocks and share stories about time. The shop was filled with laughter, and the ticking of the clocks reminded everyone of their brave history. Clara felt proud to pass on the lessons she had learned.</p>
             <p>The village of Eldenwood flourished. The people were closer than ever, united by their experiences. Clara and Anton often shared stories of the battle and the importance of courage and friendship. The clocks in the shop were not just about telling time; they symbolized the love and unity of Eldenwood.</p>
             <h3>The End</h3>
-        </details>
-    </div>
+            </div>
+        </div>
+
+        <!-- New Story 7: The Phoenix Dancer -->
+        <div class="story-details" data-genre="fantasy">
+            <div class="story-summary">The Phoenix Dancer</div>
+            <div class="story-full-content" style="display: none;">
+                <img src="image/1.jpg" alt="The Phoenix Dancer" loading="eager">
+                <h2>The Last Performance</h2>
+                <p>In the mystical realm of Aethermoor, where magic flowed like rivers through the land, lived Seraphina, a dancer whose movements could command the very elements. She was known throughout the kingdom as the Phoenix Dancer, for when she danced, flames would dance with her, creating breathtaking displays of fire and grace.</p>
+                <p>Seraphina belonged to an ancient order of Flame Dancers, guardians who protected the realm from dark forces. For centuries, her ancestors had used their gift to maintain the balance between light and shadow. But now, she was the last of her kind.</p>
+                <p>The Shadow King, Malphas, had been slowly corrupting the land, turning fertile fields into barren wastelands and pure streams into poisonous rivers. His dark magic grew stronger each day, and soon he would have enough power to plunge the entire realm into eternal darkness.</p>
+                <h2>The Ancient Prophecy</h2>
+                <p>In the great library of Luminspire, the capital city, Seraphina discovered an ancient prophecy written by the first Phoenix Dancer: "When darkness threatens to consume all light, the last dancer must perform the Dance of Rebirth. Through sacrifice and flame, she shall restore the balance, but only if her heart burns with true purpose."</p>
+                <p>The Dance of Rebirth was legendary—a performance so powerful it could purify an entire realm, but at a terrible cost. No dancer had ever survived it. The flames that would cleanse the land would consume the dancer, turning her into pure light that would scatter the darkness forever.</p>
+                <p>As Seraphina read these words, she felt the weight of destiny upon her shoulders. She was not just the last Phoenix Dancer; she was the realm's only hope.</p>
+                <h2>The Final Dance</h2>
+                <p>At the summit of Mount Pyrion, as Malphas's shadow armies approached from all directions, Seraphina began the Dance of Rebirth. Her movements were slow at first, graceful and deliberate, each step igniting small flames that danced around her feet.</p>
+                <p>As the dance intensified, the flames grew higher, swirling around her in magnificent spirals of gold and crimson. The very air shimmered with heat and magic. Her companions watched in awe as Seraphina became one with the fire, her body beginning to glow with an inner light.</p>
+                <p>With a final, magnificent leap, Seraphina spun high into the air, her body transforming into pure flame. The phoenix fire exploded outward from Mount Pyrion, racing across the land like a cleansing wave. Everywhere it touched, the corruption vanished, flowers bloomed, and clear water flowed once more.</p>
+                <p>The people of Aethermoor would later say that Seraphina had not truly died. She had become something greater—an eternal guardian whose spirit lived on in every flame, every sunrise, and every moment when light triumphed over darkness.</p>
+                <h3>The End</h3>
+            </div>
+        </div>
+
+        <!-- New Story 8: The Memory Keeper -->
+        <div class="story-details" data-genre="mystery">
+            <div class="story-summary">The Memory Keeper</div>
+            <div class="story-full-content" style="display: none;">
+                <img src="image/2.jpg" alt="The Memory Keeper" loading="eager">
+                <h2>The Forgotten Library</h2>
+                <p>Dr. Elena Vasquez was a neurologist by day and an insomniac by night. Her research into memory disorders had consumed her life for the past decade, ever since her grandmother had succumbed to Alzheimer's disease. Elena had watched helplessly as the woman who had raised her slowly forgot everything—her name, her family, even Elena herself.</p>
+                <p>One rainy evening, while working late in her laboratory, Elena received a mysterious package with no return address. Inside was an antique brass key and a note written in elegant handwriting: "The Athenaeum of Lost Memories awaits. Use this key when the moon is dark, and you shall find what science cannot provide."</p>
+                <p>The key led her to a building that shouldn't have existed—a magnificent library wedged impossibly between two modern office buildings. Inside, Elena discovered something extraordinary: thousands upon thousands of glass orbs, each one glowing softly and floating in mid-air.</p>
+                <h2>The Athenaeum</h2>
+                <p>An elderly man emerged from between the floating shelves. "Welcome, Dr. Vasquez. I am Matthias, the Keeper of this place. You have found the Athenaeum of Lost Memories."</p>
+                <p>Matthias explained that when people began to lose their memories to age, disease, or trauma, those memories didn't simply vanish. They came here, to the Athenaeum, where they were preserved for eternity. Each orb contained a lifetime of experiences from someone who could no longer remember them.</p>
+                <p>Elena found her grandmother's memories preserved in glowing orbs, experiencing them as if they were her own. She learned she could become a Keeper, helping others find their lost memories, but at the cost of her old life.</p>
+                <h2>The New Keeper</h2>
+                <p>Elena accepted, becoming known as the Memory Keeper. She helped people reconnect with lost loved ones, find peace with forgotten traumas, and discover that love transcends the boundaries of memory.</p>
+                <p>And sometimes, late at night, Elena would sit with her grandmother's memories, feeling the warmth of love that neither time nor disease could truly destroy.</p>
+                <h3>The End</h3>
+            </div>
+        </div>
+
+        <!-- New Story 9: The Last Song -->
+        <div class="story-details" data-genre="romance">
+            <div class="story-summary">The Last Song</div>
+            <div class="story-full-content" style="display: none;">
+                <img src="image/3.jpg" alt="The Last Song" loading="eager">
+                <h2>The Musician's Curse</h2>
+                <p>In the bohemian quarter of Prague, lived Tomás, a violinist whose music could make angels weep. But Tomás carried a terrible curse—every person who truly fell in love with his music would die within seven days.</p>
+                <p>The curse had been placed upon him by a jealous composer named Viktor, who had sold his soul to dark forces. "You will have the greatest musical gift in the world," Viktor had whispered, "but you will never be able to share it with anyone you love."</p>
+                <p>One foggy evening, Tomás found a young woman named Celeste crying in a small café. Against every instinct, he played for her, triggering the curse. But Celeste survived—she was a guardian spirit, sent to help those suffering from supernatural curses.</p>
+                <h2>Breaking the Curse</h2>
+                <p>Together, they learned to purify his music and confronted Viktor in a final battle fought with music instead of swords. Tomás played a song of such pure love and forgiveness that Viktor's dark power crumbled.</p>
+                <p>With the curse broken, Tomás faced a choice: Celeste had to return to the spirit realm unless he played one final song—a melody so beautiful it would bridge the gap between their worlds.</p>
+                <p>Tomás played the most beautiful song ever created, a melody containing all his love for Celeste. The magic of true love made her human, and they fell into each other's arms.</p>
+                <p>From that day forward, Tomás played with joy instead of sorrow, and his music brought healing to all who heard it.</p>
+                <h3>The End</h3>
+            </div>
+        </div>
+
+        <!-- New Story 10: The Digital Ghost -->
+        <div class="story-details" data-genre="mystery">
+            <div class="story-summary">The Digital Ghost</div>
+            <div class="story-full-content" style="display: none;">
+                <img src="image/4.jpg" alt="The Digital Ghost" loading="eager">
+                <h2>The Impossible Code</h2>
+                <p>Sarah Chen was the lead cybersecurity analyst at TechNova. The case that landed on her desk would challenge everything she thought she knew about the digital world—impossible login attempts from someone who had been dead for five years.</p>
+                <p>Dr. Marcus Webb, a brilliant AI researcher, had died in a car accident five years earlier. But someone with his exact login patterns was accessing classified files, leaving encrypted messages: "Sarah, I need your help. The accident wasn't an accident."</p>
+                <p>Sarah discovered that Webb had been working on consciousness uploading—the ability to transfer a human mind into digital form. In his final moments, he had succeeded, uploading his consciousness into the digital realm.</p>
+                <h2>The Conspiracy</h2>
+                <p>Through digital conversations, Marcus revealed a conspiracy—the Prometheus Group was systematically eliminating AI researchers who got too close to true consciousness uploading. They had killed him, but didn't know he survived in digital form.</p>
+                <p>Working together, Sarah and digital Marcus exposed the conspiracy, preventing more murders and dismantling the organization. Marcus found his purpose as a digital guardian, protecting others who pushed the boundaries of consciousness.</p>
+                <p>The digital ghost had proven that consciousness, in whatever form it takes, is defined not by its substrate but by its choices.</p>
+                <h3>The End</h3>
+            </div>
+        </div>
+    </main>
 
     <div class="feedback-form" id="feedback-form">
         <h2>Feedback Form</h2>
