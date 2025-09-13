@@ -7,12 +7,68 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+    --bg: #000000;
+    --text: #e8f5e9;
+    --muted: #b7ffb7;
+    --brand: rgb(0, 255, 0);
+    --card: #0b0b0b;
+    --border: rgba(0,255,0,0.12);
+}
+
 body {
-    background: #000000;
-    color: whitesmoke;
+    background: var(--bg);
+    color: var(--text);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(0,255,0,0.2);
+}
+
+.nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+}
+
+.brand span { color: var(--brand); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover { color: var(--brand); }
+
+.cta { 
+    padding: 8px 12px; 
+    border: 1px solid var(--brand); 
+    border-radius: 8px;
 }
 
 img {
@@ -26,9 +82,24 @@ img {
 h1 {
     margin-top: 15px;
     margin-bottom: 25px;
-    color: rgb(0, 255, 0);
+    color: var(--brand);
     font-size: 30px;
     text-align: center;
+}
+
+.search-bar {
+    max-width: 700px;
+    margin: 0 auto 16px auto;
+    padding: 0 16px;
+}
+
+.search-bar input[type="search"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
 }
 
 details {
@@ -39,7 +110,7 @@ details {
 }
 
 details summary {
-    color: lightgreen;
+    color: var(--muted);
     margin: 15px auto;
     padding: 13px 35px;
     font-size: 25px;
@@ -63,19 +134,19 @@ details p {
 }
 
 details[open] > summary {
-    color: rgb(0, 255, 0); 
+    color: var(--brand); 
     transition: 0.9s ease-in;
 }
 
 h2 {
     padding: 15px 35px 2px 35px;
-    color: rgb(0, 255, 0);
+    color: var(--brand);
     text-align: left;
 }
 
 h3 {
     padding: 18px 35px;
-    color: rgb(0, 255, 0);
+    color: var(--brand);
     text-align: left;
 }
 
@@ -83,7 +154,7 @@ h3 {
 
 footer {
     background-color: rgb(18, 156, 18);
-    color: whitesmoke;
+    color: var(--text);
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 16px;

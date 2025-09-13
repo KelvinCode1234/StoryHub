@@ -77,7 +77,10 @@ const storyOptions = [
   "King Malakai",
   "From Darkness to Light",
   "The King's Fall and the Rise of Justice",
-  "The Clockmaker's Secret"
+  "The Clockmaker's Secret",
+  "The Whispering Library",
+  "Saffron Skies",
+  "Ember and the River"
 ];
 
 storyInput.addEventListener('input', function() {
@@ -112,4 +115,19 @@ function validateEmail() {
         resultDiv.style.color = 'green';
         return true; 
     }
+}
+
+// Simple client-side search filter for <details> by <summary> text
+const searchInput = document.getElementById('search');
+const storiesContainer = document.getElementById('stories');
+if (searchInput && storiesContainer) {
+  const allDetails = Array.from(storiesContainer.querySelectorAll('details'));
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    allDetails.forEach(d => {
+      const title = (d.querySelector('summary')?.textContent || '').toLowerCase();
+      const match = title.includes(query);
+      d.style.display = match ? '' : 'none';
+    });
+  });
 }
