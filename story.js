@@ -1,10 +1,14 @@
 
+// Hide modal initially
 document.getElementById('feedback-form').style.display = 'none';
+document.getElementById('modal-overlay').style.display = 'none';
 
+// Show modal after delay
 setTimeout(function() {
+  document.getElementById('modal-overlay').style.display = 'block';
   document.getElementById('feedback-form').style.display = 'block';
   document.querySelector('.cancel-button').style.display = 'none'; 
-}, 238800);
+}, 600000);
 
 
 const form = document.getElementById('form');
@@ -35,9 +39,10 @@ form.addEventListener('submit', function(e) {
       result.style.color = 'green';
 
       setTimeout(function() {
-        document.getElementById('feedback-form').style.display = 'none';
+        hideModal();
         
         setTimeout(function() {
+          document.getElementById('modal-overlay').style.display = 'block';
           document.getElementById('feedback-form').style.display = 'block';
           cancelButton.style.display = 'block';
         }, 420000);
@@ -65,8 +70,38 @@ form.addEventListener('submit', function(e) {
 });
 
 
-cancelButton.addEventListener('click', function() {
+// Function to hide modal
+function hideModal() {
+  document.getElementById('modal-overlay').style.display = 'none';
   document.getElementById('feedback-form').style.display = 'none';
+}
+
+// Cancel button functionality
+cancelButton.addEventListener('click', function() {
+  hideModal();
+});
+
+// Close modal when clicking overlay
+document.getElementById('modal-overlay').addEventListener('click', function() {
+  hideModal();
+});
+
+// Ensure only one story is open at a time
+document.addEventListener('DOMContentLoaded', function() {
+  const storyDetails = document.querySelectorAll('details');
+  
+  storyDetails.forEach(detail => {
+    detail.addEventListener('toggle', function() {
+      if (this.open) {
+        // Close all other open details
+        storyDetails.forEach(otherDetail => {
+          if (otherDetail !== this && otherDetail.open) {
+            otherDetail.open = false;
+          }
+        });
+      }
+    });
+  });
 });
 
 //My story placeholder detector!
@@ -77,7 +112,23 @@ const storyOptions = [
   "King Malakai",
   "From Darkness to Light",
   "The King's Fall and the Rise of Justice",
-  "The Clockmaker's Secret"
+  "The Clockmaker's Secret",
+  "The Last Dragon Slayer",
+  "The Academy of Lost Spells",
+  "The Curse of the Golden Compass",
+  "The Forbidden Kingdom",
+  "The Mystery of Blackwood Manor",
+  "The Enchanted Forest",
+  "The Pirate's Daughter",
+  "The Robot's Awakening",
+  "The Lost City of Atlantis",
+  "The Vampire's Redemption",
+  "The Witch's Garden",
+  "The Samurai's Honor",
+  "The Detective's Last Case",
+  "The Mermaid's Choice",
+  "The Phoenix's Rebirth",
+  "The Wizard's Apprentice"
 ];
 
 storyInput.addEventListener('input', function() {
@@ -95,6 +146,48 @@ storyInput.addEventListener('input', function() {
   }
 });
 
+// Search functionality
+const searchInput = document.getElementById('search-stories');
+const storyItems = document.querySelectorAll('details');
+
+if (searchInput) {
+  searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    
+    storyItems.forEach(item => {
+      const title = item.querySelector('summary').textContent.toLowerCase();
+      const content = item.textContent.toLowerCase();
+      
+      if (title.includes(searchTerm) || content.includes(searchTerm)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+}
+
+// Category filter functionality
+const categoryButtons = document.querySelectorAll('.category-btn');
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const category = this.dataset.category;
+    
+    // Remove active class from all buttons
+    categoryButtons.forEach(btn => btn.classList.remove('active'));
+    // Add active class to clicked button
+    this.classList.add('active');
+    
+    storyItems.forEach(item => {
+      if (category === 'all' || item.classList.contains(category)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  });
+});
 
 function validateEmail() {
     const emailInput = document.getElementById('email').value;

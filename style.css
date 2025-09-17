@@ -9,7 +9,7 @@
 body {
     color: #fff;
     background-color: #000000;
-    height: 100vh;
+    height: 50vh;
     font-family: "Poppins", sans-serif;
     display: flex;
     flex-direction: column;
@@ -42,6 +42,15 @@ h1 {
     font-size: 2.3rem;
     margin: 8px auto;
     font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 255, 0);
+}
+
+a:hover{
+    color: #fff;
 }
 
 p {
@@ -82,6 +91,11 @@ footer {
         font-size: 13px;
         font-weight: 500;
         margin: 14px auto;
+    }
+
+    h1 {
+        font-size: 1rem;
+        font-weight: bolder;
     }
 }
 
