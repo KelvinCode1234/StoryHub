@@ -31,7 +31,7 @@ window.addEventListener('click', (event) => {
 
     if (intersects.length > 0) {
         // Redirect to the story page
-        window.location.href = 'story.html';
+        window.location.href = 'story';
     }
 });
 
