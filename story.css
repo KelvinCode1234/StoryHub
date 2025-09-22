@@ -260,6 +260,10 @@ details summary {
   cursor: pointer;
 }
 
+details ul li {
+  list-style-type: none;
+}
+
 ul li {
   padding: 0px 35px;
   line-height: 1.5;

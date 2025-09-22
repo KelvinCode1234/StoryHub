@@ -137,8 +137,8 @@ storyInput.addEventListener('input', function() {
   const storyFound = storyOptions.includes(userInput);
 
   if (storyFound) {
-    storyInput.style.color = 'black';
-    storyInput.style.backgroundColor = 'initial';
+    storyInput.style.color = 'white';
+    storyInput.style.backgroundColor = 'black';
     storyInput.placeholder = `You chose: ${userInput}`;
   } else {
     storyInput.style.color = 'red';
