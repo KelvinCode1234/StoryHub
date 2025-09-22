@@ -1,14 +1,21 @@
 
 // Hide modal initially
-document.getElementById('feedback-form').style.display = 'none';
-document.getElementById('modal-overlay').style.display = 'none';
+const feedbackForm = document.getElementById('feedback-form');
+const modalOverlay = document.getElementById('modal-overlay');
+const openFeedbackBtn = document.getElementById('open-feedback-btn');
 
-// Show modal after delay
-setTimeout(function() {
-  document.getElementById('modal-overlay').style.display = 'block';
-  document.getElementById('feedback-form').style.display = 'block';
-  document.querySelector('.cancel-button').style.display = 'none'; 
-}, 600000);
+feedbackForm.style.display = 'none';
+modalOverlay.style.display = 'none';
+
+// Function to show modal
+function showModal() {
+  modalOverlay.style.display = 'block';
+  feedbackForm.style.display = 'block';
+}
+
+// Show modal when feedback button is clicked
+openFeedbackBtn.addEventListener('click', showModal);
+
 
 
 const form = document.getElementById('form');
@@ -39,13 +46,7 @@ form.addEventListener('submit', function(e) {
       result.style.color = 'green';
 
       setTimeout(function() {
-        hideModal();
-        
-        setTimeout(function() {
-          document.getElementById('modal-overlay').style.display = 'block';
-          document.getElementById('feedback-form').style.display = 'block';
-          cancelButton.style.display = 'block';
-        }, 420000);
+        hideModal();        
       }, 1500); 
     } else {
       console.log(response);
@@ -72,8 +73,8 @@ form.addEventListener('submit', function(e) {
 
 // Function to hide modal
 function hideModal() {
-  document.getElementById('modal-overlay').style.display = 'none';
-  document.getElementById('feedback-form').style.display = 'none';
+  modalOverlay.style.display = 'none';
+  feedbackForm.style.display = 'none';
 }
 
 // Cancel button functionality
@@ -82,7 +83,7 @@ cancelButton.addEventListener('click', function() {
 });
 
 // Close modal when clicking overlay
-document.getElementById('modal-overlay').addEventListener('click', function() {
+modalOverlay.addEventListener('click', function() {
   hideModal();
 });
 

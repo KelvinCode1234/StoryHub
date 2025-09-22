@@ -7,6 +7,7 @@
     <title>Story Page</title>
     <link rel="icon" type="image/x-icon" href="image/z.png">
     <link rel="stylesheet" href="story.css">
+    <script src="https://kit.fontawesome.com/69b7050fd6.js" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LFQZ9XWXL"></script>
     <script>
@@ -16,6 +17,7 @@
 
     gtag('config', 'G-2LFQZ9XWXL');
     </script>
+    
 </head>
 
 <body>
@@ -857,6 +859,9 @@
 
     </div>
 
+    <!-- Feedback Button -->
+    <button class="feedback-btn" id="open-feedback-btn">Feedback</button>
+
     <!-- Modal Overlay -->
     <div class="modal-overlay" id="modal-overlay"></div>
 
@@ -864,7 +869,7 @@
     <div class="feedback-form" id="feedback-form">
         <h2><i class="fas fa-comment-dots"></i> Share Your Thoughts</h2>
         <form id="form" method="post" onsubmit="return validateEmail()">
-            <button class="cancel-button" type="button"><i class="fas fa-times"></i></button>
+            <button class="cancel-button" type="button"><i class="fa-solid fa-xmark"></i></button>
             <input type="hidden" name="access_key" value="a7d50f34-c4ae-4234-ae18-266f69961a3b">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <input type="email" id="email" name="email" placeholder="Your Email" required>
