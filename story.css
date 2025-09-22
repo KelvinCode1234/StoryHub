@@ -516,7 +516,7 @@ footer {
 
 .feedback-form input::placeholder,
 .feedback-form textarea::placeholder {
-  color: #888888;
+  color: #fff;
 }
 
 .feedback-form button[type="submit"] {
